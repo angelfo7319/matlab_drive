@@ -1,0 +1,15 @@
+% This program takes a vector or two points as inputs and claculates various
+% vector properties.
+%
+%
+%
+% User input
+% 
+vecinput = input("Is the input in vector format? y/n ", "s");
+if vecinput == "y"
+   F_vect = input("Input the vector in the form [x,y,z]");
+else 
+    inpoint = input("Input coordinates of vector starting point in the form [x,y,z] ");
+    endpoint = input("Input coordinates of vector end point in the form [x,y,z] ");
+    F_vect = endpoint - inpoint;
+end

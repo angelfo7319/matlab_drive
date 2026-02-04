@@ -1,0 +1,11 @@
+function [x , y , xypeak] = practice4d21(y1 , y2 , y3)
+g = 9.8;
+d = (y1 * cos(y2) / g) * (y1 * sin(y2) * sqrt((y1 * sin(y2) ^ 2) + (2 * g * y3)));
+x = linspace(y2 , d , 200);
+y = x * tan(y2) - ((0.5 * (x .^ 2) * g) / ((y1 * cos(y2)) ^ 2)) + y3;
+max_y = max(y);
+idx = find(y == max_y);
+x_p = x(idx);
+xypeak = [x_p , max_y];
+
+end

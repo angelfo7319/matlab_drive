@@ -1,0 +1,26 @@
+disp('Which function you want to plot');
+m = input('input 1, 2 and 3 for f1, f2 and f3 respectivly: ');
+
+x = linspace(0,10);
+
+if m==1
+f1 = cos(x);
+plot(x,f1,'LineWidth',2);
+xlabel('x','FontSize',14);
+ylabel('f_1(x)','FontSize',14);
+title('f_1(x)=cos(x)','FontSize',14);
+elseif m==2
+f2 = sin(x);
+plot(x,f2,'LineWidth',2);
+xlabel('x','FontSize',14);
+ylabel('f_2(x)','FontSize',14);
+title('f_2(x)=sin(x)','FontSize',14);
+else
+f3 = -x.^2 + 10*x;
+plot(x,f3,'LineWidth',2);
+xlabel('x','FontSize',14);
+ylabel('f_3(x)','FontSize',14);
+title('f_3(x)=-x^2+10x','FontSize',14);
+end
+ylabel('y');
+title('log-log');

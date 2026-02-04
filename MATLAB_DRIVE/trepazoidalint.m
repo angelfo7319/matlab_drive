@@ -1,0 +1,36 @@
+%using trapezoid riemann sum for area
+x = linspace(4,9,30);
+y = 3 - (4*x) + 2./(x.^2);
+trapz(x,y)
+%another trap integration
+x = 1:0.01:20;
+y = 2*x.^3 - x.^2 - 9;
+trint = trapz(x,y)
+
+%using integral through matlab for area
+y = @(x) 3 -4*x + 2./(x.^2);
+integral(y, 4 ,9)
+
+%how to take double integral (rectangle height 3 length 6)
+fun = @(x,y) y.^2;
+integral2(fun, -1.5,1.5, -3, 3)
+
+%integral of polynomials - only array of coefficients
+%p1 = 4.*x.^3 + 9.*x.^2 - 15.*x +2;
+p1 = [4, 9, -15, 2];
+polyint(p1, 3)
+% answer is the new coefficients of the integral
+% x^4 + 3x^3 - 7.5x^2 + 2x + c
+
+%how to do derivative
+x = 0:20;
+y = 2*x.^3 - x.^2 - 9;
+der = diff(y)./diff(x)
+
+for k = 1:length(P)
+    if P(k)>= -4 && P(k) <= 4
+        Q(k) = exp(P(k));
+    else 
+        Q(k) = P(k)/exp(4);
+    end
+end

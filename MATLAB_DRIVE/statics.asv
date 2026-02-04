@@ -1,0 +1,8 @@
+function [F_magn,F_unit] = statics (F-vect)
+%Function Description
+F_magn = sqrt(b.^2 + a.^2);
+F_unit = F_vect/F_magn;
+
+
+
+end

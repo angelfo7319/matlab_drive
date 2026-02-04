@@ -1,0 +1,7 @@
+clear
+t = 1:0.01:5;
+for k = 1:401
+    x(k) = 10*exp(-0.5*t(k))*sin(3*t(k)+2);
+    y(k) = 7*exp(-0.4*t(k))*cos(5*t(k)-3);
+end
+plot (t,x,'b',t,y,'r'), legend('x','y'),
